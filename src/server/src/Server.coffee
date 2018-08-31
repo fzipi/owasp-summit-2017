@@ -57,14 +57,14 @@ class Server
 
   start_Server_SSL: =>
     options = {
-      email: "dinis.cruz@owasp.org", // Emailed when certificates expire.
-      agreeTos: true, // Required for letsencrypt.
-      debug: false, // Add console messages and uses staging LetsEncrypt server. (Disable in production)
-      dir: "./src/server/cert", // Directory for storing certificates. Defaults to "~/letsencrypt/etc" if not present.
+      email: "dinis.cruz@owasp.org", # Emailed when certificates expire.
+      agreeTos: true, # Required for letsencrypt.
+      debug: false, # Add console messages and uses staging LetsEncrypt server. (Disable in production)
+      dir: "./src/server/cert", # Directory for storing certificates. Defaults to "~/letsencrypt/etc" if not present.
       domains: ["owaspsummit.org"],
       ports: {
-        http: @.port, // Optionally override the default http port.
-        https: @.sslport // // Optionally override the default https port.
+        http: @.port, # Optionally override the default http port.
+        https: @.sslport # Optionally override the default https port.
       }
     }
 
