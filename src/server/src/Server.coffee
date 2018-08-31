@@ -1,6 +1,6 @@
 require 'fluentnode'
 
-https             = require 'auto-sni'
+createServer      = require 'auto-sni'
 fs                = require 'fs'                      # todo: due to ssl support (use fluentnode methods)
 express           = require 'express'
 
@@ -68,7 +68,7 @@ class Server
       }
     }
 
-    @.server      = https.createServer(options, @.app)
+    @.server      = createServer(options, @.app)
 
     #console.log ' Started server with SSL support'
 
