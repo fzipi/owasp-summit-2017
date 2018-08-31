@@ -58,6 +58,7 @@ class Server
   start_Server_SSL: =>
     options = {
       email: "dinis.cruz@owasp.org", # Emailed when certificates expire.
+      version: "draft-12", # for Let's Encrypt v2 and ACME draft 12
       agreeTos: true, # Required for letsencrypt.
       debug: false, # Add console messages and uses staging LetsEncrypt server. (Disable in production)
       dir: "./src/server/cert", # Directory for storing certificates. Defaults to "~/letsencrypt/etc" if not present.
